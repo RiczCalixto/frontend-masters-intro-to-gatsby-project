@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
+import { Seo } from '../components/seo';
 
 const getTitleQuery = graphql`
   query GetTitleQuery {
@@ -20,6 +21,7 @@ export default function IndexPage() {
 
   return (
     <>
+      <Seo />
       <header>
         <Link to="/">{meta?.title}</Link>
       </header>
